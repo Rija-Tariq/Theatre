@@ -1,0 +1,119 @@
+doctype html
+head
+  title Add A Movie
+  //
+    Hydro Template
+    http://www.templatemo.com/tm-509-hydro
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=Edge')
+  meta(name='description' content='')
+  meta(name='keywords' content='')
+  meta(name='author' content='')
+  meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+  link(rel='stylesheet' href='/movie/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/movie/css/magnific-popup.css')
+  link(rel='stylesheet' href='/movie/css/font-awesome.min.css')
+  // MAIN CSS
+  link(rel='stylesheet' href='/movie/css/templatemo-style.css')
+
+
+// PRE LOADER
+section.preloader
+  .spinner
+    span.spinner-rotate
+// MENU
+section.navbar.custom-navbar.navbar-fixed-top(role='navigation')
+  .container
+    .navbar-header
+      button.navbar-toggle(data-toggle='collapse' data-target='.navbar-collapse')
+        span.icon.icon-bar
+        span.icon.icon-bar
+        span.icon.icon-bar
+      // lOGO TEXT HERE
+      a.navbar-brand(href='/index') Add A Movie
+    // MENU LINKS
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#')
+            i.fa.fa-facebook-square
+        li
+          a(href='#')
+            i.fa.fa-twitter
+        li
+          a(href='#')
+            i.fa.fa-instagram
+        li.section-btn
+          a(href='/logout') Logout
+// HOME
+section#home(data-stellar-background-ratio='0.5')
+  .overlay
+  .container
+    .row
+        // CONTACT FORM HERE
+        form#add-form(role='form' action='/movieadded' method='post')
+          .col-md-6.col-sm-6
+            input#titlee.form-control(type='text' placeholder='Movie Title' name='title' required='')
+          .col-md-6.col-sm-6
+            input#year.form-control(type='number' placeholder='Year' name='year' required='')
+            <br/>
+          .col-md-6.col-sm-6
+            input#rating.form-control(type='number' placeholder='Rating' name='rating' required='' min="0" max="10" step="any")
+          .col-md-6.col-sm-6
+            input#cf-lead.form-control(type='text' placeholder='Lead Star' name='lead' required='')
+            <br/>
+          .col-md-6.col-sm-6
+            input#image.form-control(type='tel' placeholder='Image Link' name='image' required='')
+          .col-md-6.col-sm-6
+            input#video.form-control(type='text' placeholder='Video Link' name='video' required='')
+            <br/>
+          .col-md-6.col-sm-6
+            input#trailer.form-control(type='tel' placeholder='Trailer Link' name='trailer' required='')
+          .col-md-6.col-sm-6
+            .col-md-3.col-sm-3
+                input#action.form-control(type='checkbox' name='genre' value='Action' )
+                <label for="action">Action</label>
+            .col-md-3.col-sm-3
+                input#video.form-control(type='checkbox' name='genre' value='Adventure')
+                <label for="adventure">Adventure</label>
+            .col-md-3.col-sm-3
+                input#comedy.form-control(type='checkbox'  name='genre'  value='Comedy')        
+                <label for="comedy">Comedy</label>
+          //-   <br/>
+          //- .col-md-6.col-sm-6
+          //-   <label for="rating">Rating</label>
+          //-   input#trailer.form-control(type='range' placeholder='Rating' name='rating' required='' )
+
+          .col-md-12.col-sm-12
+            <br/>
+            input.form-control(type='submit' id='send')
+        
+// FOOTER
+footer(data-stellar-background-ratio='0.5')
+  .container
+    .row
+      .col-md-5.col-sm-12
+        .footer-thumb.footer-info
+          h2 Theatre
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .col-md-2.col-sm-4
+        .footer-thumb
+          h2 Categories
+          ul.footer-link
+            li
+              a(href='#') Action
+            li
+              a(href='#') Comedy
+            li
+              a(href='#') New Release
+// SCRIPTS
+script(src='/movie/js/jquery.js')
+script(src='/movie/js/bootstrap.min.js')
+script(src='/movie/js/jquery.stellar.min.js')
+script(src='/movie/js/jquery.magnific-popup.min.js')
+script(src='/movie/js/smoothscroll.js')
+script(src='/movie/js/custom.js')
+script(src='/movie/js/test.js')
+
+

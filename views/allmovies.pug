@@ -1,0 +1,96 @@
+doctype html
+
+head
+  title Gallery - Snapshot by TEMPLATED
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='assets/css/main.css')
+  link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css")
+  link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css")
+.page-wrap
+  // Nav
+  nav#nav
+      ul
+        li
+          a.active(href='/index')
+            span.icon.fa-home
+        li
+          a(href='/allmovies')
+            span.icon.fa-camera-retro
+        li
+          a(href='/Search')
+            span.icon.fa-search
+        li
+          a(href='/addmovie')
+            span.icon.fa-pencil
+        li
+          a(href='/404')
+            span.icon.fa-battery-half
+  // Main
+  section#main
+    // Header
+    header#header
+      div
+        a.navbar-brand(href='/index') THEATRE
+    // Gallery
+    section#galleries
+      // Photo Galleries
+      .gallery
+        // Filters
+        header
+          h1 Gallery
+          ul.tabs
+            li
+              a.button.active(href='#' data-tag='all') All
+            li
+              a.button(href='#' data-tag='action') Action
+            li
+              a.button(href='#' data-tag='comedy') Comedy
+            li
+              a.button(href='#' data-tag='adventure') Adventure
+        .content
+          each val in movie
+           .media.all
+              p.supp #{val.imagelink}
+              p.titlee #{val.title}
+              a(href= '' class="suppp")
+                img(src='' alt='' class='sup' title='')      
+        .content
+          each val in action
+           .media.action
+              p.supp #{val.imagelink}
+              p.titlee #{val.title}
+              a(href= '' class="suppp")
+                img(src='' alt='' class='sup' title='')
+        .content
+          each val in comedy
+           .media.comedy
+              p.supp #{val.imagelink}
+              p.titlee #{val.title}
+              a(href= '' class="suppp")
+                img(src='' alt='' class='sup' title='')
+        .content
+          each val in adventure
+           .media.adventure
+              p.supp #{val.imagelink}
+              p.titlee #{val.title}
+              a(href= '' class="suppp")
+                img(src='' alt='' class='sup' title='')
+
+    
+    // Footer
+    footer#footer
+      .copyright
+        | &copy; Untitled Design: 
+        a(href='https://templated.co/') TEMPLATED
+        | . Images: 
+        a(href='https://unsplash.com/') Unsplash
+        | .
+// Scripts
+script(src='assets/js/jquery.min.js')
+script(src='assets/js/jquery.poptrox.min.js')
+script(src='assets/js/jquery.scrolly.min.js')
+script(src='assets/js/skel.min.js')
+script(src='assets/js/util.js')
+script(src='assets/js/main.js')
+script(type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js")

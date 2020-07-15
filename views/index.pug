@@ -1,0 +1,76 @@
+head
+  title Theatre
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='/assets/css/main.css')
+
+.page-wrap
+  // Nav
+  nav#nav
+    ul
+      li
+        a.active(href='/index')
+          span.icon.fa-home
+      li
+        a(href='/allmovies')
+          span.icon.fa-camera-retro
+      li
+        a(href='/Search')
+          span.icon.fa-search
+      li
+        a(href='/addmovie')
+          span.icon.fa-pencil
+      li
+        a(href='/404')
+          span.icon.fa-battery-half
+  // Main
+  section#main
+    // Banner
+    section#banner.banner
+      .inner
+        h1 Hey there, I&apos;m Theatre  
+        p
+          | Just Another Movie Streaming Application 
+        ul.actions
+          li
+            a.button.alt.scrolly.big(href='#galleries') Continue
+    // Gallery
+    section#galleries
+      // Photo Galleries
+      .gallery
+        header.special
+          h2 What&apos;s New
+        .content
+          each val in movie
+           .media
+              p.supp #{val.imagelink}
+              p.titlee #{val.title}
+              a(href= '' class="suppp")
+                img(src='' alt='' class='sup' title='')
+          //- .media
+          //-   a(href='images/fulls/05.jpg')
+          //-     img(src='images/thumbs/05.jpg' alt='' title='This right here is a caption.')
+        //- .content
+        //-   each val in movie
+        //-     .media  
+        //-       img#myImg(src='images/wonder.jpg' alt='Snow' style='width:100%;max-width:300px')
+        //-       // The Modal
+        //-       #myModal.modal
+        //-         span.close &times;
+        //-         video(width='400' controls='')#img01.modal-content
+        //-         #caption
+        footer
+          a.button.big(href='/allmovies') Full Gallery
+
+    // Footer
+    footer#footer
+      .copyright
+        | THEATRE | Just Another Movie Streaming Application 
+// Scripts
+script(src='assets/js/jquery.min.js')
+script(src='assets/js/jquery.poptrox.min.js')
+script(src='assets/js/jquery.scrolly.min.js')
+script(src='assets/js/skel.min.js')
+script(src='assets/js/util.js')
+script(src='assets/js/main.js')
+

@@ -1,0 +1,96 @@
+doctype html
+head
+  title Search
+  //
+    Hydro Template
+    http://www.templatemo.com/tm-509-hydro
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=Edge')
+  meta(name='description' content='')
+  meta(name='keywords' content='')
+  meta(name='author' content='')
+  meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+  link(rel='stylesheet' href='/movie/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/movie/css/magnific-popup.css')
+  link(rel='stylesheet' href='/movie/css/font-awesome.min.css')
+  // MAIN CSS
+  link(rel='stylesheet' href='/movie/css/templatemo-style.css')
+// PRE LOADER
+section.preloader
+  .spinner
+    span.spinner-rotate
+// MENU
+section.navbar.custom-navbar.navbar-fixed-top(role='navigation')
+  .container
+    .navbar-header
+      button.navbar-toggle(data-toggle='collapse' data-target='.navbar-collapse')
+        span.icon.icon-bar
+        span.icon.icon-bar
+        span.icon.icon-bar
+      // lOGO TEXT HERE
+      a.navbar-brand(href='/index') Search
+      a.btn.btn-primary(href='/index') Home
+
+    // MENU LINKS
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#')
+            i.fa.fa-facebook-square
+        li
+          a(href='#')
+            i.fa.fa-twitter
+        li
+          a(href='#')
+            i.fa.fa-instagram
+        li.section-btn
+          a(href='/logout') Logout
+
+
+// HOME
+section#home(data-stellar-background-ratio='0.5')
+  .overlayy
+  .container
+    .row
+      .col-md-6.col-sm-12
+        .home-info
+        .container
+           h2.textt Search for a movie in our database!
+           form(action='').formm
+            .form-group
+              label.textt(for='name') Name
+              input#name.form-control(type='text' placeholder='Enter Name' name='name')
+            button.btn.btn-primary(type='').searchh Search
+
+
+// FOOTER
+footer(data-stellar-background-ratio='0.5')
+  .container
+    .row
+      .col-md-5.col-sm-12
+        .footer-thumb.footer-info
+          h2 Theatre
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .col-md-2.col-sm-4
+        .footer-thumb
+          h2 Categories
+          ul.footer-link
+            li
+              a(href='#') Action
+            li
+              a(href='#') Comedy
+            li
+              a(href='#') New Release
+// SCRIPTS
+script(src='/movie/js/jquery.js')
+script(src='/movie/js/bootstrap.min.js')
+script(src='/movie/js/jquery.stellar.min.js')
+script(src='/movie/js/jquery.magnific-popup.min.js')
+script(src='/movie/js/smoothscroll.js')
+script(src='/movie/js/custom.js')
+//- script(src='/movie/js/test.js')
+script(src='/movie/js/search.js')
+
+
+
